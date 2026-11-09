@@ -1,16 +1,16 @@
-import sys
-print(sys.executable)
-
 import pandas as pd
 print("pandas", pd.__version__)
 
 ventes = pd.read_csv("data/ventes.csv")
-ventes.head()
 
 print("dimensions :", ventes.shape)
 ventes.info()
 
+df_ventes = ventes
+print(df_ventes.head())
 
-df = ventes
-print(df.head())
+#Nombre de valeurs manquantes
+df_ventes.isna().sum()
 
+#Remplacement des valeurs par "Inconnue"
+df_ventes['ville'] = df_ventes['ville'].fillna('Inconnue')
