@@ -1,2 +1,2 @@
 # data-analysis-collab
-« Objectif : analyser les ventes.»
+« Objectif : analyser les ventes par produit. »
